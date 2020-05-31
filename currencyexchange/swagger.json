@@ -52,65 +52,6 @@
         ]
       }
     },
-    "/history": {
-      "get": {
-        "tags": [
-          "Exchange Rate"
-        ],
-        "operationId": "getHistory",
-        "responses": {
-          "200": {
-            "description": "The operation was successful.",
-            "schema": {
-              "type": "string",
-              "example": "{\"rates\":{\"2020-01-03\":{\"MYR\":4.1020005383},\"2020-01-02\":{\"MYR\":4.0886268203}},\"start_at\":\"2020-01-01\",\"base\":\"USD\",\"end_at\":\"2020-01-03\"}"
-            }
-          }
-        },
-        "produces": [
-          "application/json"
-        ],
-        "description": "Get historical rates for a time period",
-        "parameters": [
-          {
-            "name": "start_at",
-            "in": "query",
-            "type": "string",
-            "required": true,
-            "default": "2019-01-01",
-            "description": "Get historical rates for a time period, in yyyy-mm-dd (eg. 2018-01-12)",
-            "format": ""
-          },
-          {
-            "name": "end_at",
-            "in": "query",
-            "type": "string",
-            "required": true,
-            "default": "2019-01-05",
-            "description": "Get historical rates for a time period, in yyyy-mm-dd (eg. 2018-01-12)",
-            "format": ""
-          },
-          {
-            "name": "base",
-            "in": "query",
-            "type": "string",
-            "minLength": 3,
-            "maxLength": 3,
-            "default": "USD",
-            "description": "Quote against a different currency by setting the base parameter in your request (eg. USD)",
-            "format": ""
-          },
-          {
-            "name": "symbols",
-            "in": "query",
-            "type": "string",
-            "default": "MYR",
-            "description": "Request specific exchange rates by setting the symbols parameter (eg. MYR,THB)",
-            "format": ""
-          }
-        ]
-      }
-    },
     "/bydate": {
       "get": {
         "tags": [
