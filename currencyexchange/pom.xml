@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tandem.bnm</groupId>
-  <artifactId>CurrencyExchange</artifactId>
+  <artifactId>currencyexchange</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>ace-bar</packaging>
   <name>CurrencyExchange</name>
@@ -17,7 +17,7 @@
 				<groupId>ibm.maven.plugins</groupId>
 				<artifactId>ace-maven-plugin</artifactId>
 				<version>11.34-SNAPSHOT</version>
-
+				<!-- 
 				<configuration>
 					<toolkitInstallDir>${ace.dir}</toolkitInstallDir>					
 					<barName>${project.build.directory}/ace/${project.artifactId}.bar</barName>
@@ -31,6 +31,22 @@
 					<defaultPropertiesFile>${project.build.directory}/ace/${project.artifactId}.properties</defaultPropertiesFile>
 					<debugWorkspace>true</debugWorkspace>
 					<applyBarOverride>true</applyBarOverride>
+				</configuration>
+				 -->
+				<configuration>
+					<toolkitInstallDir>C:\Program Files\IBM\ACE\11.0.0.8\tools</toolkitInstallDir>					
+					<barName>/currencyexchange/BARs/ace/currencyexchange.bar</barName>
+					<workspace>C:\Users\Chin\git\currency-exchange-rates\</workspace>
+					<versionString />
+					<cleanBuild>true</cleanBuild>
+					<deployAsSource>true</deployAsSource>
+					<esql21>false</esql21>
+					<applicationName>currencyexchange</applicationName>
+					<configPropFileDirectory>C:\Users\Chin\IBM\ACET11\properties</configPropFileDirectory>
+					<defaultPropertiesFile>/currencyexchange/properties/CurrencyExchange.properties</defaultPropertiesFile>
+					<debugWorkspace>true</debugWorkspace>
+					<applyBarOverride>true</applyBarOverride>
+					<aceRunDir>C:\PROGRA~1\IBM\ACE\11.0.0.8\server\bin</aceRunDir>
 				</configuration>
 
 				<extensions>true</extensions>
